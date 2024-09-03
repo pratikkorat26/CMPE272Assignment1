@@ -1,0 +1,13 @@
+version: '3.8'  # Specify the version of docker-compose
+
+services:
+  app:
+    build: .
+    image: pratikkorat/flask-hello-app:latest
+    ports:
+      - "5000:5000"  # Map port 6001 on the host to port 6001 in the container
+    environment:
+      FLASK_ENV: developmenthello  # Set Flask environment variable
+    volumes:
+      - .:/app  # Mount the current directory to /app in the container
+    command: python3 main.py  # Run the application

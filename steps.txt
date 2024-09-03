@@ -1,0 +1,28 @@
+minikube start
+
+minikube addons enable ingress
+
+kubectl apply -f deploymenthello.yaml
+kubectl apply -f deploymentworld.yaml
+kubectl apply -f ingress-service.yaml
+
+kubectl get all
+
+minikube tunnel
+
+curl http://localhost/hello
+curl http://localhost/world
+
+################################ NODEPORT ##########################################
+minikube ip
+
+
+
+###
+curl http://192.168.49.2:30001/hello
+curl http://192.168.49.2:30002/world
+
+
+############################# alternative way #####################################
+kubectl port-forward service/flask-hello-app-service 8080:80
+kubectl port-forward service/flask-world-app-service 8081:80

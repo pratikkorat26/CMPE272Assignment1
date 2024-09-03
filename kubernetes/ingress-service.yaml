@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: flask-ingress
+  labels:
+    app: flask-apps
+spec:
+  rules:
+    - host: localhost
+      http:
+        paths:
+          - path: /hello
+            pathType: Prefix
+            backend:
+              service:
+                name: flask-hello-app-service
+                port:
+                  number: 80
+          - path: /world
+            pathType: Prefix
+            backend:
+              service:
+                name: flask-world-app-service
+                port:
+                  number: 80

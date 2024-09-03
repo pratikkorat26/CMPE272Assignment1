@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-world-app
+  labels:
+    app: flask-world-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask-world-app
+  template:
+    metadata:
+      labels:
+        app: flask-world-app
+    spec:
+      containers:
+      - name: flask-world-app
+        image: pratikkorat/flask-world-app:latest
+        ports:
+        - containerPort: 6001
+        env:
+        - name: FLASK_ENV
+          value: "developmentworld"
