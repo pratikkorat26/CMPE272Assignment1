@@ -22,22 +22,3 @@ spec:
         env:
         - name: FLASK_ENV
           value: "developmenthello"
-
----
-
-apiVersion: v1
-kind: Service
-metadata:
-  name: flask-hello-app-service
-  labels:
-    app: flask-hello-app
-spec:
-  type: ClusterIP # This is the default, a virtual IP address will be allocated
-  selector:
-    # This is how the Service will find the Pods
-    app: flask-hello-app
-  ports:
-    - name: web
-      protocol: TCP
-      port: 80 # The port exposed by the service
-      targetPort: 5000 # The port or port name of the Pod
