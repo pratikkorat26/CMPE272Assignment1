@@ -38,4 +38,3 @@
 >    * "docker pull pratikkorat/flask-world-app"
 >    * "docker run -p 6001:6001 pratikkorat/flask-world-app"
 >    * open "http://localhost:6001/world"
->>>>>>> master
