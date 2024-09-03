@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+# CMPE272Assignment1
+=======
 # Assignment 1 : Hello World from MicroServices
 ## Author : Pratikkumar Dalsukhbhai Korat
 ### SJSU ID : 017512508
