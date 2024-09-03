@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-world-app
+  labels:
+    app: flask-world-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask-world-app
+  template:
+    metadata:
+      labels:
+        app: flask-world-app
+    spec:
+      containers:
+      - name: flask-world-app
+        image: pratikkorat/flask-world-app:latest
+        ports:
+        - containerPort: 6001
+        env:
+        - name: FLASK_ENV
+          value: "developmentworld"
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-world-app-service
+  labels:
+    app: flask-world-app
+spec:
+  type: ClusterIP # This is the default, a virtual IP address will be allocated
+  selector:
+    # This is how the Service will find the Pods
+    app: flask-world-app
+  ports:
+    - name: web
+      protocol: TCP
+      port: 80 # The port exposed by the service
+      targetPort: 6001 # The port or port name of the Pod
