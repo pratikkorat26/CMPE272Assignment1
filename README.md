@@ -64,9 +64,18 @@ CMPE272Assignment1
 > 5. Run ingress service command
 >    * run "kubectl apply -f ingress-service.yaml"
 
-> 6. Both service will be running on kubernetes cluster and accessible at
+> 6. Check everthing is running smoothly
+>    * kubectl get all
+
+> 7. Run minikube tunnel
+>   * run "minikube tunnel"
+
+> 8. Both service will be running on kubernetes cluster and accessible at
 >    * http://localhost/hello
 >    * http://localhost/world
 
-> 7. Go to the project directory
+> 9. Go to the project directory
 >    * run "python test.py"
+
+
+### Results
