@@ -1,9 +1,14 @@
-<<<<<<< HEAD
-# CMPE272Assignment1
+CMPE272Assignment1
 =======
 # Assignment 1 : Hello World from MicroServices
 ## Author : Pratikkumar Dalsukhbhai Korat
 ### SJSU ID : 017512508
+
+## Technologies Used in this Application
+> 1. Python (hello and world application)
+> 2. Minikube
+> 3. Docker
+
 
 ## How to Run Applications individually
 
@@ -38,3 +43,30 @@
 >    * "docker pull pratikkorat/flask-world-app"
 >    * "docker run -p 6001:6001 pratikkorat/flask-world-app"
 >    * open "http://localhost:6001/world"
+
+
+## Running mircroservices on Kubernetes Cluster using minikube
+
+> 1. open CMD and run following command
+>    * minikube start
+
+> 2. run "minikube addons enable ingress"
+
+> 3. Deployment objects
+>    * Go into /kubernetes directory
+>       * run "kubectl apply -f deploymenthello.yaml"
+>       * run "kubectl apply -f deploymentworld.yaml"
+
+> 4. Serivce Objects
+>    * run "kubectl apply -f apphello-service.yaml"
+>    * run "kubectl apply -f appworld-service.yaml"
+
+> 5. Run ingress service command
+>    * run "kubectl apply -f ingress-service.yaml"
+
+> 6. Both service will be running on kubernetes cluster and accessible at
+>    * http://localhost/hello
+>    * http://localhost/world
+
+> 7. Go to the project directory
+>    * run "python test.py"
