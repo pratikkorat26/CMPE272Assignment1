@@ -44,6 +44,9 @@ CMPE272Assignment1
 >    * "docker run -p 6001:6001 pratikkorat/flask-world-app"
 >    * open "http://localhost:6001/world"
 
+> Links to docker image
+> 1. https://hub.docker.com/repository/docker/pratikkorat/flask-hello-app/general
+> 2. https://hub.docker.com/repository/docker/pratikkorat/flask-world-app/general
 
 ## Running mircroservices on Kubernetes Cluster using minikube
 
@@ -78,4 +81,13 @@ CMPE272Assignment1
 >    * run "python test.py"
 
 
-### Results
+
+## Results
+
+### 1. Minikube start and running
+![img.png](images/minikube.png)
+
+
+### 2. Running script
+![img.png](images/script_success.png)
+
