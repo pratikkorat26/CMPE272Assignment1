@@ -87,11 +87,11 @@ CMPE272Assignment1
 ## Results
 
 ### 1. Minikube start and running
-![img.png](images/minikube.png)
+![img.png](./images/minikube.png)
 
 
 ### 2. Running script
-![img.png](images/script_success.png)
+![img.png](./images/script_success.png)
 
 
 ### 3. Cluster Information
