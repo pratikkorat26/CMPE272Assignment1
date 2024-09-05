@@ -93,3 +93,14 @@ CMPE272Assignment1
 ### 2. Running script
 ![img.png](images/script_success.png)
 
+
+### 3. Cluster Information
+![img.png](./images/cluster.png)
+
+
+### 4. Hello App
+![img.png](./images/hello-app.png)
+
+
+### 5. World app
+![img.png](./images/world-app.png)
