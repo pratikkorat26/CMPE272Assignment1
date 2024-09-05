@@ -4,6 +4,8 @@ CMPE272Assignment1
 ## Author : Pratikkumar Dalsukhbhai Korat
 ### SJSU ID : 017512508
 
+* This project runs two microservices on a Kubernetes cluster, which are queried together to produce a "Hello World" output.
+
 ## Technologies Used in this Application
 > 1. Python (hello and world application)
 > 2. Minikube
